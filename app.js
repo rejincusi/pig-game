@@ -67,8 +67,8 @@ function onHold() {
         scores[activePlayer] += roundScore 
     
         document.getElementById('score-' + activePlayer).textContent = scores[activePlayer];
-        var winScore = document.getElementById("winScore").value
-        if (scores[activePlayer] >= winScore) {
+        // var winScore = document.getElementById("winScore").value
+        if (scores[activePlayer] >= 100) {
             winSound.play()
             document.querySelector('#name-' + activePlayer).textContent = 'winner';
             document.querySelector('.player-' + activePlayer + '-panel').classList.add('winner');
